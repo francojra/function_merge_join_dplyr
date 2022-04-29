@@ -41,10 +41,27 @@ library(dplyr)
 # Conjuntos de dados -----------------------------------------------------------------------------------------------------------------------
 
 data_1 <- data.frame(owner = c('Alice', 'Bob', 'Carol', 'Dan', 'Erin'),
-                     pet = c('Snow', 'Mittens', 'Mittens', 'Goldie', 'Pancho'),
+                     pet = c('Snowy', 'Mittens', 'Mittens', 'Goldie', 'Pancho'),
                      stringsAsFactors = FALSE)
 
 data_2 <- data.frame(pet = c('Fido', 'Goldie', 'Mittens', 'Rex', 'Snowy'),
                      Species = c('Dog', 'Goldfish', 'Cat', 'Dog', 'Dog'),
                      stringsAsFactors = FALSE)
+
+# Left join --------------------------------------------------------------------------------------------------------------------------------
+
+data_3 <- merge(data_1, data_2, by.x = 'pet', by.y = 'pet', all.x = TRUE)
+data_3
+
+left_join(data_1, data_2, by = 'pet') # Pacote dplyr
+
+# Right join -------------------------------------------------------------------------------------------------------------------------------
+
+data_4 <- merge(data_1, data_2, by.x = 'pet', by.y = 'pet', all.y = TRUE)
+data_4
+
+right_join(data_1, data_2, by = 'pet')
+
+# Inner join -------------------------------------------------------------------------------------------------------------------------------
+
 
