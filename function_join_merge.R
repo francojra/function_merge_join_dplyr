@@ -34,5 +34,17 @@
 
 ### Retorna todas as linhas das tabelas unidas sejam elas correspondentes ou não.
 
+# Pacote necessário ------------------------------------------------------------------------------------------------------------------------
 
+library(dplyr)
+
+# Conjuntos de dados -----------------------------------------------------------------------------------------------------------------------
+
+data_1 <- data.frame(owner = c('Alice', 'Bob', 'Carol', 'Dan', 'Erin'),
+                     pet = c('Snow', 'Mittens', 'Mittens', 'Goldie', 'Pancho'),
+                     stringsAsFactors = FALSE)
+
+data_2 <- data.frame(pet = c('Fido', 'Goldie', 'Mittens', 'Rex', 'Snowy'),
+                     Species = c('Dog', 'Goldfish', 'Cat', 'Dog', 'Dog'),
+                     stringsAsFactors = FALSE)
 
