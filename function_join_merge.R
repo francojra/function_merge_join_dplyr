@@ -64,4 +64,14 @@ right_join(data_1, data_2, by = 'pet')
 
 # Inner join -------------------------------------------------------------------------------------------------------------------------------
 
+data_5 <- merge(data_1, data_2, by.x = 'pet', by.y = 'pet', all = FALSE)
+data_5
 
+inner_join(data_1, data_2, by = 'pet')
+
+# Full join --------------------------------------------------------------------------------------------------------------------------------
+
+data_6 <- merge(data_1, data_2, by.x = 'pet', by.y = 'pet', all = TRUE)
+data_6
+
+full_join(data_1, data_2, by = 'pet')
